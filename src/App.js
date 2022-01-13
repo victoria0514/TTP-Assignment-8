@@ -2,13 +2,19 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
 import Home from "./components/Home";
-import LogIn from "./components/Login";
-import UserProfile from "./components/UserProfile";
+import LogIn from "./components/LogIn";
+import Profile from "./components/Profile";
 import Debit from "./components/Debit";
 import Credit from "./components/Credit";
 
+
 function App() {
 
+  const mockLogIn = (logInInfo) => {
+    const newUser = {...currentUser}
+    newUser.userName = logInInfo.userName
+    setCurrentUser(newUser)
+  }
 
 
 
@@ -21,11 +27,12 @@ function App() {
         <NavBar>
       <Router>
         <div>
-          <Route exact path="/" element={HomeComponent} />
-          <Route exact path="/login" element={LogInComponent} />
-          <Route exact path="/userProfile" element={UserProfileComponent} />
-          <Route exact path="/debit" element={DebitComponent} />
-          <Route exact path="/credit" element={CreditComponent} />
+          <Route exact path="/" element={<Home user={currentUser}/>}/>
+          <Route exact path="/login" element={<LogIn user={currentUser} mockLogIn={mockLogIn}/>}/>
+          <Route exact path="/profile" element={<Profile user={currentUser}/>}/>
+          <Route exact path="/debit" element={<Debit user={currentUser}/>}/>
+          <Route exact path="/credit" element={<Credit user={currentUser}/>}/>
+         
         </div>
       </Router>
       </NavBar>
@@ -42,15 +49,17 @@ function NavBar()
         <ul>
         <li><a Link to = "/" > Home Page</a></li>
         <li><a Link to = "/login" > User Log In</a></li>
-        <li><a Link to = "/userProfile" > Your Profile</a></li>
+        <li><a Link to = "/profile" > Your Profile</a></li>
         <li><a Link to = "/debit" > Your Debit Card Information</a></li>
         <li><a Link to = "/credit" > Your Credit Card Information</a></li>
         </ul>
 
 
 
+
+
     </div>
   )
+  }
 
-}
 export default App;

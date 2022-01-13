@@ -36,3 +36,116 @@
     transform: rotate(360deg);
   }
 }
+
+.navbar {
+  height: 12%;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 100px;
+  cursor: pointer;
+}
+
+nav {
+  flex: 1;
+  text-align: right;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin-left: 60px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 13px;
+}
+
+.row {
+  display: flex;
+  height: 88%;
+  align-items: center;
+}
+
+.col {
+  flex-basis: 50%;
+}
+
+h1 {
+  color: #fff;
+  font-size: 100px;
+}
+
+p {
+  color: #fff;
+  font-size: 11px;
+  line-height: 15px;
+}
+
+.card {
+  width: 200px;
+  height: 230px;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 15px 25px;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin: 10px 15px;
+  background-image: url();
+  background-position: center;
+  background-size: cover;
+  transition: transform 0.5s;
+}
+
+.card1 {
+  background-image: url(https://media.istockphoto.com/vectors/older-woman-has-alzheimers-disease-and-a-question-above-her-in-the-vector-id1170874344?k=20&m=1170874344&s=170667a&w=0&h=RjHVBpR5EESyvUNc2da6lIjoSoFveSrKZ02Oe8R0ius=);
+}
+.card2 {
+  background-image: url(https://scx2.b-cdn.net/gfx/news/2021/alzheimer.jpg);
+}
+.card3 {
+  background-image: url(https://cdn.sanity.io/images/0vv8moc6/psychtimes/f1044bab7c557fe54969e0a97e618adad3ba4635-580x581.jpg);
+}
+.card4 {
+  background-image: url(https://media.istockphoto.com/vectors/worldalzheimersday_v1-vector-id638715290?b=1&k=20&m=638715290&s=170667a&w=0&h=ZYFt67296v7nJ8f4Ha3xta-ymf7hYb0vQlV3_xC96lc=);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+h2 {
+  color: #fff;
+  text-shadow: 0 0 5px #999;
+}
+
+h5 {
+  color: #fff;
+  text-shadow: 0 0 5px #999;
+}
+
+.card p {
+  text-shadow: 0 0 15px #000;
+  font-size: 8px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(25, 25, 109);
+  background-position: center;
+  background-size: cover;
+  padding-left: 8%;
+  padding-right: 8%;
+  box-sizing: border-box;
+}
